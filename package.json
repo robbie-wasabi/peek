@@ -1,0 +1,39 @@
+{
+  "name": "peek",
+  "version": "0.0.1",
+  "description": "The Peek CLI is a command-line tool that allows developers to create 'previews' of their changes in an obfuscated form. Once some condition is met, the developer can 'reveal' the changes, de-obfuscating the code for final integration.",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "peek": "src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prettier": "prettier --write \"src/**/*.ts\"",
+    "test": "mocha -r esm-ts-node/register 'test/**/*.ts'"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@octokit/rest": "^19.0.11",
+    "@types/node": "18.16.3",
+    "axios": "^0.27.2",
+    "chai": "^4.3.7",
+    "chalk": "^5.2.0",
+    "clear": "^0.1.0",
+    "commander": "^10.0.1",
+    "figlet": "^1.6.0",
+    "keytar": "^7.9.0",
+    "parse-diff": "^0.11.1",
+    "simple-git": "^3.19.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.6",
+    "@types/lodash": "^4.14.194",
+    "@types/mocha": "^10.0.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
